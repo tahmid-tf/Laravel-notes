@@ -1,0 +1,4 @@
+ if (Storage::disk('public')->exists($product->product_image)) {
+            $image = 'storage/' . $product->product_image;
+            unlink($image);
+        }
