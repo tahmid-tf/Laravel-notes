@@ -1,0 +1,2 @@
+ $products = \App\Models\Product::all()->sum('product_price');
+ return $products;
