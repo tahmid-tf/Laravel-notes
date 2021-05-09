@@ -1,0 +1,19 @@
+DB method uses insert, 
+
+ $result = DB::table('details')->insert([
+            'name' => $request->get('name'),
+            'roll' => $request->get('roll'),
+            'city' => $request->get('city'),
+            'phn' => $request->get('phn'),
+            'class' =>$request->get('class')
+        ]);
+
+Eloquent model uses create method,
+
+$createData = Detail::create([
+            'name' => $request->get('name'),
+            'roll' => $request->get('roll'),
+            'city' => $request->get('city'),
+            'phn' => $request->get('phn'),
+            'class' =>$request->get('class')
+        ]);
