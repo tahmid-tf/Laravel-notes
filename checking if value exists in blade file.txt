@@ -1,0 +1,5 @@
+   @if (empty($post->description))
+        <p>ff</p>
+        @else
+        {{ $post->description }}
+    @endif

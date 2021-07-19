@@ -1,0 +1,1 @@
+$userInfo->created_at->format('M d Y - h:i')
