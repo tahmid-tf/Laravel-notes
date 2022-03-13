@@ -1,0 +1,4 @@
+//get file type extension from view
+
+<p>{{  pathinfo(asset('storage/'.$personal->image),PATHINFO_EXTENSION) }}</p>
+
