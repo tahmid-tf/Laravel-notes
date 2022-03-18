@@ -1,0 +1,4 @@
+laravel https in .htaccess in cpanel
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
