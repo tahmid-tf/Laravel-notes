@@ -1,0 +1,16 @@
+      $query = Order::query();
+
+        $searchParams = [
+
+            'req_param' => request('req_param'),
+        ];
+        
+//        -------------------------- dynamic column mapping --------------------------
+
+        $query->where(function($q) use ($searchParams) {
+            $q->where('users_email', 'LIKE', '%' . $searchParams['req_param'] . '%')
+                ->orWhere('order_id', $searchParams['req_param'])
+                ->orWhere('order_name', $searchParams['req_param']);
+        });
+
+//        -------------------------- dynamic column mapping --------------------------
